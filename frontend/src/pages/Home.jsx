@@ -1,15 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Topbar from '../components/ui/shared/Topbar'
 import Emojis from '../components/ui/icons/Emojis'
 import Strip from '../components/ui/shared/Strip'
 import StripRight from '../components/ui/shared/StripRight'
 
 const Home = () => {
+  const questionsData = [
+    { id: 1, question: "O que é o Discontus?", answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry." },
+    { id: 2, question: "Como funciona a plataforma?", answer: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." },
+    { id: 3, question: "Como faço uma reserva?", answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry." },
+    { id: 4, question: "Quais descontos estão disponíveis?", answer: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." },
+    { id: 5, question: "Posso cancelar uma reserva?", answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry." },
+    { id: 6, question: "Como entrar em contato com o suporte?", answer: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." },
+    { id: 7, question: "Preciso pagar para usar o Discontus?", answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry." },
+    { id: 8, question: "Posso usar o Discontus fora do Brasil?", answer: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." },
+    { id: 9, question: "Quais são os termos de uso?", answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry." },
+    { id: 10, question: "Como alterar meus dados de usuário?", answer: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." }
+  ];
+
+  const [openQuestions, setOpenQuestions] = useState(Array(questionsData.length).fill(false));
+
+  const toggleAnswer = (index) => {
+    setOpenQuestions((prev) =>
+      prev.map((isOpen, i) => (i === index ? !isOpen : isOpen))
+    );
+  };
   return (
     <>
       <Topbar />
-      <div className='w-full max-w-[390px] m-auto pt-24 px-5'>
-        <div className="hero">
+      <div className='w-full max-w-[425px] m-auto pt-24 px-5'>
+        <div id='hero' className="hero scroll-mt-[72px]">
           <h1
             className='text-[32px] line'
           >
@@ -27,7 +47,7 @@ const Home = () => {
               <span>descontus.com/</span>
               <input className='max-w-44' type="text" placeholder='seunegócio' />
             </div>
-            <button className='w-full mt-3 bg-main-dark py-3 grid items-center rounded-full text-main-white font-bold'>Cadastre-se Grátis</button>
+            <button className='w-full mt-3 bg-main-dark py-3 grid items-center rounded-full text-main-white font-bold hover:bg-main-color'>Cadastre-se Grátis</button>
 
             <div className="partners mt-5 text-center">
               <span>Estabelecimentos <span className='font-bold'>parceiros</span> que se cadastraram.</span>
@@ -52,7 +72,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="steps mt-14 max-w-[390px] m-auto">
+      <div id='steps' className="steps mt-14 max-w-[390px] m-auto scroll-mt-[72px]">
         <div className="step bg-main-dark py-6 px-5">
           <h2 className='text-4xl text-main-white'>1. Crie ✏️</h2>
           <p className='text-main-white mt-3'>Crie um <span className='px-1 bg-main-color text-main-white font-medium'>Desconto</span> de um produto, combo ou ingresso e disponibilize para nosso usuários. <br /><br /> Assim que o cliente faz a compra pelo app, uma reserva com QR Code é gerada.</p>
@@ -68,7 +88,7 @@ const Home = () => {
       </div>
 
       <div className="strips text-2xl max-w-[390px] m-auto relative">
-        <div className='w-full h-[1px] bg-main-gray absolute top-1 z-50'></div>
+        <div className='w-full h-[1px] bg-main-gray absolute top-1 z-10'></div>
         <div className="strip-container bg-main-dark pt-0.5 overflow-hidden relative">
           <div className="strip strip-left flex items-center gap-5 py-2 bg-main-dark text-2xl text-main-white font-bold animate-left">
             <Strip />
@@ -93,10 +113,10 @@ const Home = () => {
       <div className="cta my-14 flex flex-col gap-2 items-center max-w-[390px] m-auto">
         <img src="/assets/logo-black.png" alt="" className='max-w-40' />
         <p className='opacity-70'>Obtenha um fluxo de novos clientes.</p>
-        <button className='bg-main-color py-3 px-8 rounded-full text-main-white font-bold text-sm'>Cadastre-se Grátis</button>
+        <button className='bg-main-color py-3 px-8 rounded-full text-main-white font-bold text-sm hover:bg-main-dark'>Cadastre-se Grátis</button>
       </div>
 
-      <div className="same-boat px-5 pt-10 pb-14 bg-main-dark max-w-[390px] m-auto">
+      <div id='mission' className="same-boat px-5 pt-10 pb-14 bg-main-dark max-w-[390px] m-auto scroll-mt-[72px]">
         <img className='compass' src="/assets/compass.png" alt="" />
         <h2 className='text-main-white text-4xl mt-5'>Estamos no mesmo barco.<br /><br /> Nós ganhamos quando <span className='px-1 bg-main-color'>você ganha</span></h2>
         <p className='mt-14 text-main-white font-medium'>O nosso faturamento é obtido com micro-comissões que deduzimos de cada venda.<br /><br />
@@ -107,7 +127,7 @@ const Home = () => {
         </p>
       </div>
 
-      <div className="prices my-14 px-5">
+      <div id='prices' className="prices my-14 px-5 scroll-mt-[72px]">
         <h2 className='text-4xl mt-5'>Preços.</h2>
         <div className="price-card mt-5 p-6 bg-second-color rounded-2xl">
           <span className='font-semibold text-2xl'>Grátis</span>
@@ -118,42 +138,35 @@ const Home = () => {
               <span className='text-3xl font-black'> 3% </span>
               por venda
             </p>
-            <button className='mt-5 w-full border border-main-dark rounded-full py-2'>Cadastrar</button>
+            <button className='mt-5 w-full border border-main-dark rounded-full py-2 hover:bg-main-dark hover:text-main-white'>Cadastrar</button>
           </div>
         </div>
       </div>
 
-      <div className="faq my-14 px-5">
+      <div id='faq' className="faq my-14 px-5 scroll-mt-[72px]">
         <h2 className='text-4xl mt-5'>FAQ.</h2>
-        <div className="questions flex flex-col items-center gap-10 mt-8">
-          <div className="question-block">
-            <div className="question font-semibold text-xl">
-              <span className='text-second-gray'>01</span> <br />
-              <span>O que é o Discontus?</span>
+        <div className="questions flex flex-col items-start gap-10 mt-8">
+          {questionsData.map((item, index) => (
+            <div key={item.id} className="question-block">
+              <div
+                className="question font-semibold text-xl cursor-pointer"
+                onClick={() => toggleAnswer(index)}
+              >
+                <span className="text-second-gray">{String(index + 1).padStart(2, '0')}</span> <br />
+                <span className='hover:bg-main-dark hover:text-main-white'>{item.question}</span>
+              </div>
+              {openQuestions[index] && (
+                <p className="answer mt-5">
+                  {item.answer}
+                </p>
+              )}
             </div>
-            <p className="answer mt-5">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            </p>
-          </div>
-          <div className="question-block">
-            <div className="question font-semibold text-xl">
-              <span className='text-second-gray'>01</span> <br />
-              <span>O que é o Discontus?</span>
-            </div>
-            <p className="answer mt-5">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            </p>
-          </div>
-          <div className="question-block">
-            <div className="question font-semibold text-xl">
-              <span className='text-second-gray'>01</span> <br />
-              <span>O que é o Discontus?</span>
-            </div>
-            <p className="answer mt-5">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            </p>
-          </div>
+          ))}
         </div>
+      </div>
+
+      <div className="footer">
+         
       </div>
     </>
   )

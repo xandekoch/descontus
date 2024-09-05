@@ -53,6 +53,7 @@ body,
     font-family: inter, sans-serif;
     background-color: #fff;
     color: #000;
+    scroll-behavior: smooth;
 }
 
 #AuthLayout {
@@ -90,7 +91,7 @@ h1, h2, h3 {
 }
 
 .menu-closed {
-    top: -310px;
+    top: -480px;
     transition: top 0.2s ease;
     /* Adicione uma transição suave */
 }

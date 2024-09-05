@@ -26,24 +26,42 @@ const Topbar = () => {
         </button>
       </div>
 
-      <div className={`transition-transform delay-500 fixed z-20 w-full mt-14 py-6 px-4 rounded-b-lg ${isMenuOpen ? 'menu-open' : 'menu-closed'}`}>
-        <div className='absolute top-0 left-0 z-[-1] w-full h-full bg-alt-dark-2/80 backdrop-blur-sm  rounded-b-lg border-b-2 border-alt-gray-border'></div>
-        <div className=''>
-          <button
-            onClick={() => { navigate('/') }}
-            className='p-4 w-fit flex gap-3 items-center'>
-            Explorar
-          </button>
-          <div
-            onClick={() => { navigate('/') }}
-            className='p-4 w-fit flex gap-3 items-center'>
-            Afilie-se
-          </div>
-          <div
-            onClick={() => { navigate('/') }}
-            className='p-4 w-fit flex gap-3 items-center'>
-            Configurações
-          </div>
+      <div className={`transition-transform delay-500 fixed z-20 w-full mt-[72px] ${isMenuOpen ? 'menu-open' : 'menu-closed'}`}>
+        <div
+          onClick={() => { setIsMenuOpen(!isMenuOpen) }}
+          className={`h-screen w-full left-0 mt-[72px] fixed bg-main-dark/70 -z-10 ${isMenuOpen ? 'block' : 'hidden'}`}></div>
+        <div className='p-0 top-0 py-6 left-0 w-screen flex flex-col items-center h-full bg-main-white rounded-b-3xl'>
+          <a
+            href='#hero'
+            onClick={() => { setIsMenuOpen(!isMenuOpen) }}
+            className='p-4 w-full text-center font-semibold text-lg'>
+            Início
+          </a>
+          <a
+            href='#steps'
+            onClick={() => { setIsMenuOpen(!isMenuOpen) }}
+            className='p-4 w-full text-center font-semibold text-lg'>
+            Funcionalidades
+          </a>
+          <a
+            href='#mission'
+            onClick={() => { setIsMenuOpen(!isMenuOpen) }}
+            className='p-4 w-full text-center align-middle font-semibold text-lg'>
+            Nossa Missão
+          </a>
+          <a
+            href='#prices'
+            onClick={() => { setIsMenuOpen(!isMenuOpen) }}
+            className='p-4 w-full text-center align-middle font-semibold text-lg'>
+            Preços
+          </a>
+          <a
+            href='#faq'
+            onClick={() => { setIsMenuOpen(!isMenuOpen) }}
+            className='p-4 w-full text-center align-middle font-semibold text-lg'>
+            FAQ
+          </a>
+          <button className='mt-7 bg-main-dark py-3 px-24 grid items-center rounded-full text-main-white font-bold hover:bg-main-color'>Cadastre-se Grátis</button>
         </div>
       </div>
     </div>
