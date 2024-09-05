@@ -1,6 +1,8 @@
 import React from 'react'
 import Topbar from '../components/ui/shared/Topbar'
 import Emojis from '../components/ui/icons/Emojis'
+import Strip from '../components/ui/shared/Strip'
+import StripRight from '../components/ui/shared/StripRight'
 
 const Home = () => {
   return (
@@ -65,27 +67,25 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="strips">
-        <div className="strip-container overflow-hidden relative">
-          <div className="strip flex gap-5 py-2 bg-main-dark text-2xl text-main-white font-bold">
-            <span className=''>UMENTE</span>
-            <div className="dollars flex gap-5">
-              <img className='max-w-6 max-h-6' src="/assets/dollar-icon.png" alt="" />
-              <img className='max-w-6 max-h-6' src="/assets/dollar-icon.png" alt="" />
-              <img className='max-w-6 max-h-6' src="/assets/dollar-icon.png" alt="" />
-            </div>
-            <span className=''>A <span className='px-0.5 bg-main-color'>DESCONT</span></span>
+      <div className="strips text-2xl max-w-[390px] m-auto relative">
+        <div className='w-full h-[1px] bg-main-gray absolute top-1 z-50'></div>
+        <div className="strip-container bg-main-dark pt-0.5 overflow-hidden relative">
+          <div className="strip strip-left flex items-center gap-5 py-2 bg-main-dark text-2xl text-main-white font-bold animate-left">
+            <Strip />
+            <Strip />
+            <Strip />
+            <Strip />
+            <Strip />
           </div>
         </div>
-        <div className="strip-container overflow-hidden relative">
-          <div className="strip flex gap-5 py-2 bg-main-dark text-2xl text-main-white font-bold">
-            <span className=''>ANUNCIE · VENDA · FATURE</span>
-            <div className="dollars flex gap-5">
-              <img className='max-w-6 max-h-6' src="/assets/dollar-icon.png" alt="" />
-              {/* <img className='max-w-6 max-h-6' src="/assets/dollar-icon.png" alt="" />
-              <img className='max-w-6 max-h-6' src="/assets/dollar-icon.png" alt="" /> */}
-            </div>
-            {/* <span className=''>OFERTE · VENDA · RECEBA</span> */}
+
+        <div className="strip-container overflow-hidden relative -translate-y-2">
+          <div className="strip strip-right flex items-center gap-5 py-2 bg-main-dark text-2xl text-main-white font-bold animate-right">
+            <StripRight />
+            <StripRight />
+            <StripRight />
+            <StripRight />
+            <StripRight />
           </div>
         </div>
       </div>
@@ -97,7 +97,7 @@ const Home = () => {
       </div>
 
       <div className="same-boat px-5 pt-10 pb-14 bg-main-dark max-w-[390px] m-auto">
-        <img src="/assets/compass.png" alt="" />
+        <img className='compass' src="/assets/compass.png" alt="" />
         <h2 className='text-main-white text-4xl mt-5'>Estamos no mesmo barco.<br /><br /> Nós ganhamos quando <span className='px-1 bg-main-color'>você ganha</span></h2>
         <p className='mt-14 text-main-white font-medium'>O nosso faturamento é obtido com micro-comissões que deduzimos de cada venda.<br /><br />
           Nossos clientes, portanto, não são mais apenas clientes, <span className='underline'>mas parceiros</span>. Nós somos 100% <span className='px-1 bg-main-white text-main-dark'>skin in the game</span> (pele em jogo).<br /><br />
@@ -105,6 +105,55 @@ const Home = () => {
           Nós sempre vamos estar ao seu lado, não apenas porque somos gentis, mas porque é nosso interesse financeiro em comum.<br /><br />
           E isso é saudável.
         </p>
+      </div>
+
+      <div className="prices my-14 px-5">
+        <h2 className='text-4xl mt-5'>Preços.</h2>
+        <div className="price-card mt-5 p-6 bg-second-color rounded-2xl">
+          <span className='font-semibold text-2xl'>Grátis</span>
+          <p className='pt-3'>Comece agora mesmo.</p>
+          <div className="price pt-10">
+            <p className='font-bold text-xl'>
+              <span className='text-lg opacity-60 line-through'>6%</span>
+              <span className='text-3xl font-black'> 3% </span>
+              por venda
+            </p>
+            <button className='mt-5 w-full border border-main-dark rounded-full py-2'>Cadastrar</button>
+          </div>
+        </div>
+      </div>
+
+      <div className="faq my-14 px-5">
+        <h2 className='text-4xl mt-5'>FAQ.</h2>
+        <div className="questions flex flex-col items-center gap-10 mt-8">
+          <div className="question-block">
+            <div className="question font-semibold text-xl">
+              <span className='text-second-gray'>01</span> <br />
+              <span>O que é o Discontus?</span>
+            </div>
+            <p className="answer mt-5">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </p>
+          </div>
+          <div className="question-block">
+            <div className="question font-semibold text-xl">
+              <span className='text-second-gray'>01</span> <br />
+              <span>O que é o Discontus?</span>
+            </div>
+            <p className="answer mt-5">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </p>
+          </div>
+          <div className="question-block">
+            <div className="question font-semibold text-xl">
+              <span className='text-second-gray'>01</span> <br />
+              <span>O que é o Discontus?</span>
+            </div>
+            <p className="answer mt-5">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </p>
+          </div>
+        </div>
       </div>
     </>
   )
