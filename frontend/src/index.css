@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('/assets/Euclid Circular A Regular.ttf') format('truetype');
+    font-weight: 400; /* Regular weight */
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Euclid Circular A';
+    src: url('/assets/Euclid Circular A Normal.ttf') format('truetype');
+    font-weight: 500; /* Normal weight (assumed) */
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Euclid Circular A';
+    src: url('/assets/Euclid Circular A Semibold.ttf') format('truetype');
+    font-weight: 600; /* Semibold weight */
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Euclid Circular A';
+    src: url('/assets/Euclid Circular A Bold.ttf') format('truetype');
+    font-weight: 700; /* Bold weight */
+    font-style: normal;
+  }
+
+/* input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #fff !important;
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: inter, sans-serif;
+    background-color: #fff;
+    color: #000;
+}
+
+#AuthLayout {
+    background-color: var(--main-white);
+}
+
+:root {
+    --main-gradient: linear-gradient(to right, #FF5926, #FF7E56);
+    --main-color: #FF5926;
+    --second-color: #FF7E56;
+    --main-white: #fff;
+    --main-dark: #000;
+    --main-gray: #9CA3AF;
+    --second-gray: #D7E3E7;
+    --main-yellow: #FED500;
+    --main-green: #01D434;
+}
+
+h1, h2, h3 {
+    font-family: 'Euclid Circular A';
+    font-weight: 700;
+    line-height: 130%;
+}
+
+.bg-main-gradient {
+    background: var(--main-gradient);
+}
+
+.h-full-minus-14 {
+    height: calc(100% - 168px);
+}
+
+.Toastify__toast {
+    background-color: var(--alt-dark-3);
+}
+
+.menu-closed {
+    top: -310px;
+    transition: top 0.2s ease;
+    /* Adicione uma transição suave */
+}
+
+.menu-open {
+    top: -1px;
+    transition: top 0.2s ease;
+    /* Adicione uma transição suave */
+}
+
+/* emoji */
+
+.emoji {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sparkle {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* strip */
+  
