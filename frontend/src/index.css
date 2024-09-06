@@ -50,6 +50,7 @@ body,
     border: 0;
     outline: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
     font-family: inter, sans-serif;
     background-color: #fff;
     color: #000;
@@ -92,7 +93,7 @@ h1, h2, h3 {
 }
 
 .menu-closed {
-    top: -480px;
+    top: -500px;
     transition: top 0.2s ease;
     /* Adicione uma transição suave */
 }
@@ -148,11 +149,11 @@ h1, h2, h3 {
   }
   
   .animate-left {
-    animation: scroll-left 350s linear infinite;
+    animation: scroll-left 40s linear infinite;
   }
   
   .animate-right {
-    animation: scroll-right 350s linear infinite;
+    animation: scroll-right 40s linear infinite;
   }
   
   

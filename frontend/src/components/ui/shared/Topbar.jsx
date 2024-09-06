@@ -11,13 +11,11 @@ const Topbar = () => {
     <div className="topbar w-full fixed top-0 z-40 max-w-[430px] m-auto">
       <div
         className='w-full px-5 py-4 bg-main-white h-fit flex items-center justify-between z-50'>
-        <button
-          onClick={() => { navigate('/') }}
+        <a
+        href='/'
           className='w-40 rounded flex gap-2'>
-          <div>
             <img src="/assets/logo-black.png" alt="" />
-          </div>
-        </button>
+        </a>
 
         <button
           onClick={() => { setIsMenuOpen(!isMenuOpen) }}
