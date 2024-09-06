@@ -8,7 +8,7 @@ const Topbar = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="topbar w-full fixed top-0 z-40 max-w-[390px] m-auto">
+    <div className="topbar w-full fixed top-0 z-40 max-w-[430px] m-auto">
       <div
         className='w-full px-5 py-4 bg-main-white h-fit flex items-center justify-between z-50'>
         <button
@@ -29,8 +29,8 @@ const Topbar = () => {
       <div className={`transition-transform delay-500 fixed z-20 w-full mt-[72px] ${isMenuOpen ? 'menu-open' : 'menu-closed'}`}>
         <div
           onClick={() => { setIsMenuOpen(!isMenuOpen) }}
-          className={`h-screen w-full left-0 mt-[72px] fixed bg-main-dark/70 -z-10 ${isMenuOpen ? 'block' : 'hidden'}`}></div>
-        <div className='p-0 top-0 py-6 left-0 w-screen flex flex-col items-center h-full bg-main-white rounded-b-3xl'>
+          className={`h-screen w-full left-0 fixed bg-main-dark/70 -z-10 ${isMenuOpen ? 'block' : 'hidden'}`}></div>
+        <div className='p-0 top-0 py-6 left-0 w-screen max-w-[430px] flex flex-col items-center h-full bg-main-white rounded-b-3xl'>
           <a
             href='#hero'
             onClick={() => { setIsMenuOpen(!isMenuOpen) }}

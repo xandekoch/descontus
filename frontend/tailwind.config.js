@@ -11,6 +11,7 @@ export default {
         'second-color': '#FF7E56',
         'main-white': '#FFFFFF',
         'main-dark': '#000000',
+        'second-dark': '#18181C',
         'main-gray': '#9CA3AF',
         'second-gray': '#D7E3E7',
         'main-yellow': '#FED500',

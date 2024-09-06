@@ -28,7 +28,7 @@ const Home = () => {
   return (
     <>
       <Topbar />
-      <div className='w-full max-w-[425px] m-auto pt-24 px-5'>
+      <div className='w-full max-w-[430px] m-auto pt-24 px-5'>
         <div id='hero' className="hero scroll-mt-[72px]">
           <h1
             className='text-[32px] line'
@@ -65,14 +65,14 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="discount-50 mt-10 max-w-[390px] m-auto">
+        <div className="discount-50 mt-10 max-w-[430px] m-auto">
           <h2 className='text-[32px]'>Ganhe 50% <br />
             de desconto <span className='px-1 bg-main-color text-main-white font-medium'>vitalício.</span></h2>
           <p className='text-justify mt-3'>Cobramos uma taxa de 6% apenas quando você faz uma <span className='font-bold'>venda</span>, mas para os estabelecimentos que se cadastrarem no <span className='font-bold'>pré-lançamento</span> essa taxa será de 3% (50% OFF) <span className='font-bold'>para sempre.</span></p>
         </div>
       </div>
 
-      <div id='steps' className="steps mt-14 max-w-[390px] m-auto scroll-mt-[72px]">
+      <div id='steps' className="steps mt-14 max-w-[430px] m-auto scroll-mt-[72px]">
         <div className="step bg-main-dark py-6 px-5">
           <h2 className='text-4xl text-main-white'>1. Crie ✏️</h2>
           <p className='text-main-white mt-3'>Crie um <span className='px-1 bg-main-color text-main-white font-medium'>Desconto</span> de um produto, combo ou ingresso e disponibilize para nosso usuários. <br /><br /> Assim que o cliente faz a compra pelo app, uma reserva com QR Code é gerada.</p>
@@ -127,7 +127,7 @@ const Home = () => {
         </p>
       </div>
 
-      <div id='prices' className="prices my-14 px-5 scroll-mt-[72px]">
+      <div id='prices' className="prices my-14 px-5 max-w-[390px] scroll-mt-[72px]">
         <h2 className='text-4xl mt-5'>Preços.</h2>
         <div className="price-card mt-5 p-6 bg-second-color rounded-2xl">
           <span className='font-semibold text-2xl'>Grátis</span>
@@ -143,7 +143,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div id='faq' className="faq my-14 px-5 scroll-mt-[72px]">
+      <div id='faq' className="faq mt-14 px-5 max-w-[390px] scroll-mt-[72px]">
         <h2 className='text-4xl mt-5'>FAQ.</h2>
         <div className="questions flex flex-col items-start gap-10 mt-8">
           {questionsData.map((item, index) => (
@@ -165,9 +165,56 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="footer">
-         
+      <div className="footer mt-20 px-5 pt-20 pb-12 max-w-[390px] bg-main-dark">
+        <div className="subscribe">
+          <img src="/assets/logo-white.png" alt="" className='max-w-44' />
+          <p className='text-main-gray/40 mt-10 font-medium text-lg'>Receba Atualizações<br />diretamente no seu inbox.</p>
+          <div className="form mt-9">
+            <input className='w-full px-5 py-3 font-semibold bg-second-dark text-main-white rounded-full' type="text" placeholder='Digite seu email' />
+            <button className='w-full mt-4 bg-second-color py-3 grid items-center rounded-full text-main-white font-bold hover:bg-main-white hover:text-main-dark'>Cadastre-se Grátis</button>
+          </div>
+          <p className='mt-10 text-main-gray text-[12px]'>Ao se inscrever você concorda com nossa Política de Privacidade e consente em receber atualizações.</p>
+        </div>
+
+        <div className='w-full h-[1px] mt-14 bg-main-gray'></div>
+
+        <div className="links mt-12 text-main-white font-medium flex flex-col gap-7">
+          <a href="">
+            Início
+          </a>
+          <a href="">
+            Funcionalidades
+          </a>
+          <a href="">
+            Nossa missão
+          </a>
+          <a href="">
+            Início
+          </a>
+          <a href="">
+            Preços
+          </a>
+          <a href="">
+            FAQ
+          </a>
+        </div>
+
+        <div className="mt-14 ltda-social">
+          <p className='text-main-gray text-[12px]'>© 2024 Discontus, Ltda. Todos os direitos reservados.</p>
+          <div className="social-icons flex items-center gap-2 mt-5">
+            <a href="">
+              <img src="/assets/twitter-icon.svg" alt="" />
+            </a>
+            <a href="">
+              <img src="/assets/youtube-icon.svg" alt="" />
+            </a>
+            <a href="">
+              <img src="/assets/telegram-icon.svg" alt="" />
+            </a>
+          </div>
+        </div>
       </div>
+          
     </>
   )
 }
