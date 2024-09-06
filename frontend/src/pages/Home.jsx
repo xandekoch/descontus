@@ -34,7 +34,7 @@ const Home = () => {
           <h1
             className='text-[32px] line'
           >
-            <Emojis /><span className='px-1 bg-main-dark text-main-white font-black'>Obtenha</span> clientes.
+            <Emojis /> <span className='px-1 bg-main-dark text-main-white font-black'>Obtenha</span> clientes.
             <br /> Pague depois.
           </h1>
           <p
