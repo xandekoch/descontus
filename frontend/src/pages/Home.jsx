@@ -4,6 +4,7 @@ import Emojis from '../components/ui/icons/Emojis'
 import Strip from '../components/ui/shared/Strip'
 import StripRight from '../components/ui/shared/StripRight'
 import StripFooter from '../components/ui/shared/StripFooter'
+import { envConfig } from '../services/config';
 
 const Home = () => {
   const questionsData = [
@@ -48,7 +49,7 @@ const Home = () => {
               <span>descontus.com/</span>
               <input className='max-w-44' type="text" placeholder='seunegócio' />
             </div>
-            <button className='w-full mt-3 bg-main-dark py-3 grid items-center rounded-full text-main-white font-bold hover:bg-main-color'>Cadastre-se Grátis</button>
+            <a href={envConfig.registerFormUrl} target="_blank" className='w-full mt-3 bg-main-dark py-3 grid items-center text-center rounded-full text-main-white font-bold hover:bg-main-color'>Cadastre-se Grátis</a>
 
             <div className="partners mt-5 text-center">
               <span>Estabelecimentos <span className='font-bold'>parceiros</span> que se cadastraram.</span>
@@ -106,7 +107,7 @@ const Home = () => {
       <div className="cta my-14 flex flex-col gap-2 items-center w-screen max-w-[430px] m-auto">
         <img src="/assets/logo-black.png" alt="" className='max-w-40' />
         <p className='opacity-70'>Obtenha um fluxo de novos clientes.</p>
-        <button className='bg-main-color py-3 px-8 rounded-full text-main-white font-bold text-sm hover:bg-main-dark'>Cadastre-se Grátis</button>
+        <a href={envConfig.registerFormUrl} target="_blank" className='bg-main-color py-3 px-8 rounded-full text-main-white font-bold text-sm hover:bg-main-dark'>Cadastre-se Grátis</a>
       </div>
 
       <div id='mission' className="same-boat px-5 pt-10 pb-14 bg-main-dark w-screen max-w-[430px] m-auto scroll-mt-[72px]">
@@ -131,7 +132,7 @@ const Home = () => {
               <span className='text-3xl font-black'> 3% </span>
               por venda
             </p>
-            <button className='mt-5 w-full border border-main-dark rounded-full py-2 hover:bg-main-dark hover:text-main-white'>Cadastrar</button>
+            <a href={envConfig.registerFormUrl} target="_blank" className='mt-5 w-full grid text-center border border-main-dark rounded-full py-2 hover:bg-main-dark hover:text-main-white'>Cadastrar</a>
           </div>
         </div>
       </div>
@@ -164,7 +165,7 @@ const Home = () => {
           <p className='text-main-gray/40 mt-10 font-medium text-lg'>Receba Atualizações<br />diretamente no seu inbox.</p>
           <div className="form mt-9">
             <input className='w-full px-5 py-3 font-semibold bg-second-dark text-main-white rounded-full' type="text" placeholder='Digite seu email' />
-            <button className='w-full mt-4 bg-second-color py-3 grid items-center rounded-full text-main-white font-bold hover:bg-main-white hover:text-main-dark'>Cadastre-se Grátis</button>
+            <a href={envConfig.registerFormUrl} target="_blank" className='w-full mt-4 bg-second-color py-3 grid text-center rounded-full text-main-white font-bold hover:bg-main-white hover:text-main-dark'>Cadastre-se Grátis</a>
           </div>
           <p className='mt-10 text-main-gray text-[12px]'>Ao se inscrever você concorda com nossa Política de Privacidade e consente em receber atualizações.</p>
         </div>
