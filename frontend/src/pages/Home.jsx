@@ -9,7 +9,7 @@ import { envConfig } from '../services/config';
 const Home = () => {
   const questionsData = [
     { id: 1, question: "O que é o Descontus?", answer: <>Descontus é um aplicativo que oferece <strong>descontos exclusivos</strong> e <strong>programas de fidelidade</strong>, com o objetivo de atrair mais clientes para <strong>estabelecimentos e negócios</strong>, ajudando-os a aumentar suas vendas e fidelizar seus consumidores.</> },
-    { id: 2, question: "Quais as taxas envolvidas?", answer: <>Cobramos <strong>6%</strong> das vendas realizadas, com uma promoção de <strong>3%</strong> para restaurantes que se cadastrarem durante o pré-lançamento, <strong>válida de forma vitalícia</strong>.<br /><br />Além disso, há uma taxa adicional de <strong>3,99% + R$0,39</strong> referente ao <strong>processamento do cartão.</strong></>},
+    { id: 2, question: "Quais as taxas envolvidas?", answer: <>Cobramos <strong>9%</strong> das vendas realizadas, com uma promoção de <strong>6%</strong> para restaurantes que se cadastrarem durante o pré-lançamento, <strong>válida de forma vitalícia</strong>.<br /><br />Além disso, há uma taxa adicional de <strong>3,99% + R$0,39</strong> referente ao <strong>processamento do cartão.</strong></>},
     { id: 3, question: "Como vou receber?", answer: <>Você deve cadastrar seus <strong>dados bancários de recebimento</strong> no app.<br /><br />Acompanhe seu saldo e saque a qualquer momento.</> },
     { id: 4, question: "O que posso anunciar no app?", answer: <>Produtos, combos de produtos, entradas e ingressos.</> },
     { id: 5, question: "Como posso acompanhar minhas vendas e reservas?", answer: <>Você terá acesso a um <strong>painel de vendedor</strong> com todos os pedidos e demais detalhes necessários.</> },
@@ -68,9 +68,9 @@ const Home = () => {
         </div>
 
         <div className="discount-50 mt-10 max-w-[430px] m-auto">
-          <h2 className='text-[32px]'>Ganhe 50% <br />
+          <h2 className='text-[32px]'>Ganhe 33% <br />
             de desconto <span className='px-1 bg-main-color text-main-white'>vitalício.</span></h2>
-          <p className='mt-3'>Cobramos uma taxa de 6% apenas quando você faz uma <span className='font-bold'>venda</span>, mas para os estabelecimentos que se cadastrarem no <span className='font-bold'>pré-lançamento</span> essa taxa será de 3% (50% OFF) <span className='font-bold'>para sempre.</span></p>
+          <p className='mt-3'>Cobramos uma taxa de <strong>9%</strong> apenas quando você faz uma <span className='font-bold'>venda</span>, mas para os estabelecimentos que se cadastrarem no <span className='font-bold'>pré-lançamento</span> essa taxa será de <strong>6%</strong> <span className='font-bold'>para sempre.</span></p>
         </div>
       </div>
 
@@ -128,8 +128,8 @@ const Home = () => {
           <p className='pt-3'>Comece agora mesmo.</p>
           <div className="price pt-10">
             <p className='font-bold text-xl'>
-              <span className='text-lg opacity-60 line-through'>6%</span>
-              <span className='text-3xl font-black'> 3% </span>
+              <span className='text-lg opacity-60 line-through'>9%</span>
+              <span className='text-3xl font-black'> 6% </span>
               por venda
             </p>
             <a href={envConfig.registerFormUrl} target="_blank" className='mt-5 w-full grid text-center border border-main-dark rounded-full py-2 hover:bg-main-dark hover:text-main-white'>Cadastrar</a>
