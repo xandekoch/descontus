@@ -78,10 +78,12 @@ const Home = () => {
         <div className="step bg-main-dark py-6 px-5">
           <h2 className='text-4xl text-main-white'>1. Crie ✏️</h2>
           <p className='text-main-white mt-3'>Crie um <span className='px-1 bg-main-color text-main-white font-medium'>Desconto</span> de um produto, combo ou ingresso e disponibilize para nosso usuários. <br /><br /> Assim que o cliente faz a compra pelo app, uma reserva com QR Code é gerada.</p>
+          <img src="/assets/phone-1.png" alt="" className='mt-4' />
         </div>
         <div className="step bg-main-white py-6 px-5">
           <h2 className='text-4xl text-main-dark'>2. Venda 🔥</h2>
           <p className='text-main-dark mt-3'>O cliente apresenta a reserva no estabelecimento na data marcada e o pagamento é liberado <span className='px-1 bg-main-color text-main-white font-medium'>imediatamente</span> para saque.</p>
+          {/* <img src="/assets/phone-2.png" alt="" /> */}
         </div>
         <div className="step bg-second-color py-6 px-5">
           <h2 className='text-4xl text-main-dark'>3. Fidelize 🤝</h2>
@@ -105,7 +107,7 @@ const Home = () => {
       </div>
 
       <div className="cta my-14 flex flex-col gap-2 items-center w-screen max-w-[430px] m-auto">
-        <img src="/assets/logo-black.png" alt="" className='max-w-40' />
+        <img src="/assets/logo-black.svg" alt="" className='max-w-40' />
         <p className='opacity-70'>Obtenha um fluxo de novos clientes.</p>
         <a href={envConfig.registerFormUrl} target="_blank" className='bg-main-color py-3 px-8 rounded-full text-main-white font-bold text-sm hover:bg-main-dark'>Cadastre-se Grátis</a>
       </div>

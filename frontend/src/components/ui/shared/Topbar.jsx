@@ -14,7 +14,7 @@ const Topbar = () => {
         <a
         href='/'
           className='w-40 rounded flex gap-2'>
-            <img src="/assets/logo-black.png" alt="" />
+            <img src="/assets/logo-black.svg" alt="" />
         </a>
 
         <button
